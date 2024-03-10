@@ -1,13 +1,11 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Countries from './component/Countries'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
+      <Countries></Countries>
       <h1>All countries in World</h1>
     </>
   )
