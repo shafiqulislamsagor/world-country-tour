@@ -1,5 +1,7 @@
 import { useEffect } from "react";
-import { useState } from "react"
+import { useState } from "react";
+import Countrie from "./Countrie";
+
 
 const Countries = () =>{
     const [countries , setCountries] = useState([]);
@@ -12,9 +14,13 @@ const Countries = () =>{
         }
         api();
     },[])
+    console.log(countries);
     return(
         <div>
             <h3>Countries: {countries.length}</h3>
+            {
+                countries.map(country => <Countrie key={country.cca2} country={country}></Countrie>)
+            }
         </div>
     )
 }
