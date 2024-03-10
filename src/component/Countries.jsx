@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import Countrie from "./Countrie";
+import './Extra.css'
 
 
 const Countries = () =>{
@@ -14,13 +15,15 @@ const Countries = () =>{
         }
         api();
     },[])
-    console.log(countries);
+    // console.log(countries);
     return(
         <div>
             <h3>Countries: {countries.length}</h3>
+            <div className="country-row">
             {
                 countries.map(country => <Countrie key={country.cca2} country={country}></Countrie>)
             }
+            </div>
         </div>
     )
 }
